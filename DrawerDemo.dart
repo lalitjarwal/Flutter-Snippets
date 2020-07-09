@@ -20,10 +20,12 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Widget _childBody = HomeWidget();
   static var title = 'Home';
+  var action=null;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AppBar(title: Text(title)
+      ,actions: action,),
       body: _childBody,
       drawer: Drawer(
         child: ListView(
@@ -59,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text('Item 2'),
               onTap: () {
                 setState(() {
+                  action=[PopupMenuButton(itemBuilder:(context){})];
                   title = 'item2';
                   _childBody = Item2();
                 });
@@ -91,7 +94,7 @@ class Item1 extends StatelessWidget {
   const Item1({
     Key key,
   }) : super(key: key);
-
+  
   @override
   Widget build(BuildContext context) {
     return Container(
