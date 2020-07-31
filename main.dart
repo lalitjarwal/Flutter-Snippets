@@ -94,7 +94,7 @@ class AppBody extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8)),
                       child: Center(
                           child: Text(
-                        'SIGNUP',
+                        'SIGN-IN',
                         style: TextStyle(color: Colors.white),
                       )),
                     ),
